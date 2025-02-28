@@ -5,16 +5,16 @@ FROM mcr.microsoft.com/dotnet/sdk:9.0 AS build
 WORKDIR /src
 
 # Copie o arquivo de solução (caso tenha) para o contêiner
-COPY ["TopCon.Api/TopCon.Api.csproj", "TopCon.Api/"]
+COPY ["TopCon.Api.csproj", "TopCon.Api/"]
 
 # Restaure as dependências
-RUN dotnet restore "TopCon.Api/TopCon.Api.csproj"
+RUN dotnet restore "TTopCon.Api.csproj"
 
 # Copie o restante do código da aplicação
 COPY . .
 
 # Publique a aplicação para a pasta de saída /app
-RUN dotnet publish "TopCon.Api/TopCon.Api.csproj" -c Release -o /app/publish
+RUN dotnet publish "TopCon.Api.csproj" -c Release -o /app/publish
 
 # Etapa 2: Imagem base para rodar a aplicação
 FROM mcr.microsoft.com/dotnet/aspnet:9.0
