@@ -1,0 +1,6 @@
+@TopCon.Api_HostAddress = http://localhost:5218
+
+GET {{TopCon.Api_HostAddress}}/Post
+Accept: application/json
+
+###
