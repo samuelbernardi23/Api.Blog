@@ -21,15 +21,11 @@ Certifique-se de ter os seguintes softwares instalados:
 Clone o repositório:
 
 ```
-git clone https://github.com/seu-usuario/topcon-api.git
-cd topcon-api
+git clone https://github.com/samuelbernardi23/Api.Blog.git
+cd Api.Blog
 ```
 
-Configure as variáveis de ambiente
-
-Renomeie o arquivo .env.example para .env e preencha com suas credenciais.
-
-Alternativamente, configure as variáveis no appsettings.json:
+Configure as variáveis no appsettings.json:
 ```
 {
   "ConnectionStrings": {
