@@ -8,7 +8,7 @@ WORKDIR /src
 COPY ["TopCon.Api.csproj", "TopCon.Api/"]
 
 # Restaure as dependências
-RUN dotnet restore "TTopCon.Api.csproj"
+RUN dotnet restore "TopCon.Api.csproj"
 
 # Copie o restante do código da aplicação
 COPY . .
