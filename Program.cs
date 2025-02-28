@@ -19,7 +19,7 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 builder.Services.AddCors(options => options.AddPolicy(name: "FrontApp",
     policy =>
     {
-        policy.WithOrigins("https://localhost:3000")
+        policy.WithOrigins(builder.Configuration["FrontAppUrl"] ?? "https://localhost:3000")
         .AllowAnyHeader()
         .AllowCredentials()
         .AllowAnyMethod();
